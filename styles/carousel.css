@@ -1,0 +1,29 @@
+.carousel-item > img {
+  height: -webkit-fill-available;
+}
+
+.carousel-control-prev {
+  top: 50%;
+  left: 10%;
+  bottom: unset;
+  width: unset;
+}
+
+.carousel-control-next {
+  top: 50%;
+  right: 10%;
+  bottom: unset;
+  width: unset;
+}
+
+.play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  font-size: 50px !important;
+  opacity: 0.5 !important;
+}
+
+.play:hover {
+  opacity: 1 !important;
+}
