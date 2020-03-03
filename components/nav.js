@@ -8,31 +8,46 @@ const links = [
 export default function Nav() {
   return (
     <nav>
-      <ul className="flex justify-start items-center pr-24 pl-24 h-20">
-        <img src="/img/common/logo_black.png" className="h-12"/>
-        <li className="mr-6 ml-auto">
-          <Link href="/">
-            <a className="text-black no-underline hover:text-yellow-600">HOME</a>
+      <ul className='flex justify-start items-center pr-24 pl-24 h-20'>
+        <Link href='/'>
+          <img
+            src='/img/common/logo_black.png'
+            className='h-12 cursor-pointer'
+          />
+        </Link>
+        <li className='mr-6 ml-auto'>
+          <Link href='/'>
+            <a className='text-black no-underline hover:text-yellow-600'>
+              HOME
+            </a>
           </Link>
         </li>
-        <li className="mr-6">
-          <Link href="/about">
-            <a className="text-black no-underline hover:text-yellow-600">ABOUT</a>
+        <li className='mr-6'>
+          <Link href='/about'>
+            <a className='text-black no-underline hover:text-yellow-600'>
+              ABOUT
+            </a>
           </Link>
         </li>
-        <li className="mr-6">
-          <Link href="/artist">
-            <a className="text-black no-underline hover:text-yellow-600">ARTIST</a>
+        <li className='mr-6'>
+          <Link href='/artist'>
+            <a className='text-black no-underline hover:text-yellow-600'>
+              ARTIST
+            </a>
           </Link>
         </li>
-        <li className="mr-6">
-          <Link href="/shop">
-            <a className="text-black no-underline hover:text-yellow-600">SHOP</a>
+        <li className='mr-6'>
+          <Link href='/shop'>
+            <a className='text-black no-underline hover:text-yellow-600'>
+              SHOP
+            </a>
           </Link>
         </li>
-        <li className="mr-6">
-          <Link href="/contact">
-            <a className="text-black no-underline hover:text-yellow-600">CONTACT</a>
+        <li className='mr-6'>
+          <Link href='/contact'>
+            <a className='text-black no-underline hover:text-yellow-600'>
+              CONTACT
+            </a>
           </Link>
         </li>
         {/* <ul className="flex justify-between items-center">
