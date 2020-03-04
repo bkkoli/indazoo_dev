@@ -1,0 +1,12 @@
+.fit-content {
+  height: fit-content;
+}
+
+.container-px {
+  padding-left: 24rem;
+  padding-right: 24rem;
+}
+
+.artists {
+  overflow-y: hidden;
+}

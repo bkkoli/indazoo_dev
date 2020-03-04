@@ -8,7 +8,7 @@ export default () => {
       <Nav />
       <div className='bg-gray-200 h-full flex flex-col px-64'>
         <BreadCrumb name={router.pathname.replace('/', '')} />
-        <div className='hero m-auto text-center text-6xl font-extrabold'>
+        <div className='hero py-64 text-center text-6xl font-extrabold'>
           Comming Soon
         </div>
       </div>

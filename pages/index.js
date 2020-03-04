@@ -11,9 +11,20 @@ export default () => {
   const onClickCloseBtn = () => {
     setClickedArrow(false)
   }
+  const imgList = [
+    {
+      src: '/img/main/main_1.jpeg',
+    },
+    {
+      src: '/img/main/main_2.jpg',
+    },
+    {
+      src: '/img/main/main_3.jpg',
+    },
+  ]
   return (
-    <div>
-      <Carousel />
+    <div className='index'>
+      <Carousel imgList={imgList} />
       <i
         aria-hidden='true'
         className='play icon text-gray-300 hover:text-white cursor-pointer'

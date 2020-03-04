@@ -1,15 +1,15 @@
-.carousel-item > img {
+.index .carousel-item > img {
   height: -webkit-fill-available;
 }
 
-.carousel-control-prev {
+.index .carousel-control-prev {
   top: 50%;
   left: 10%;
   bottom: unset;
   width: unset;
 }
 
-.carousel-control-next {
+.index .carousel-control-next {
   top: 50%;
   right: 10%;
   bottom: unset;
@@ -26,4 +26,8 @@
 
 .play:hover {
   opacity: 1 !important;
+}
+
+.artists .carousel-item > img {
+  max-height: 100%;
 }
