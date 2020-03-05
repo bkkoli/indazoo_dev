@@ -1,5 +1,6 @@
 @import './carousel.css';
 @import './about.css';
+@import './contact.css';
 
 /* purgecss start ignore */
 @tailwind base;

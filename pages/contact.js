@@ -1,6 +1,7 @@
 import Nav from '../components/nav'
 import BreadCrumb from '../components/breadCrumb'
 import { useRouter } from 'next/router'
+import IphoneMsg from '../components/contact/iphoneMsg'
 export default () => {
   const router = useRouter()
   return (
@@ -16,10 +17,10 @@ export default () => {
                 className='max-h-full w-auto rounded-full h-16'
               />
               <span className='font-bold text-xl pl-3'>indazoo</span>
-              <i
+              {/*  <i
                 aria-hidden='true'
                 className='ellipsis horizontal icon flex-auto text-right pr-8'
-              ></i>
+              ></i> */}
             </div>
             <div>
               <img
@@ -34,12 +35,12 @@ export default () => {
                 <img />
                 <span className='font-bold text-xl'>Someone</span>
               </div> */}
-            <div>
-              <img
+            <div style={{ height: '670px' }}>
+              {/* <img
                 className='w-full rounded-b-md'
-                style={{ height: '670px' }}
                 src='/img/contact/Thumbnail.png'
-              />
+              /> */}
+              <IphoneMsg />
             </div>
           </div>
         </div>

@@ -10,7 +10,7 @@ export default () => {
       <div className='bg-gray-200 h-full flex flex-col container-px'>
         <BreadCrumb name={router.pathname.replace('/', '')} />
         <div className='flex flex-row'>
-          <div className='flex flex-col w-7/12 mr-16'>
+          <div className='flex flex-col w-9/12 mr-16'>
             <div className='bg-white flex flex-row h-20 items-center rounded-t-md pl-8'>
               <img
                 src='/img/common/logo_face.jpg'
@@ -26,7 +26,7 @@ export default () => {
               />
             </div>
           </div>
-          <div className='flex flex-col w-5/12 bg-white'>
+          <div className='flex flex-col w-3/12 bg-white'>
             <div className=' flex flex-row h-20 items-center rounded-t-md'>
               <span className='font-bold text-xl pl-8'>Member</span>
             </div>

@@ -4,7 +4,7 @@ export default function carousel(props) {
     <Carousel className='max-h-full w-screen'>
       {props.imgList.map((img, i) => {
         return (
-          <Carousel.Item>
+          <Carousel.Item key={i}>
             <img className='d-block w-100' src={img.src} />
             {img.label ? (
               <Carousel.Caption>

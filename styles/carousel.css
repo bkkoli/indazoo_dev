@@ -31,3 +31,10 @@
 .artists .carousel-item > img {
   max-height: 100%;
 }
+
+.artists .carousel-inner {
+  height: 670px;
+}
+.artists .carousel-caption {
+  bottom: 20%;
+}
