@@ -1,5 +1,7 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import Dropdown from './common/dropdown'
+import { useState } from 'react'
 const links = [
   { href: 'https://github.com/zeit/next.js', label: 'GitHub' },
   { href: 'https://nextjs.org/docs', label: 'Docs' },
@@ -12,6 +14,10 @@ Nav.getInitialProps = async ctx => {
 }
 
 export default function Nav() {
+  const [dropdownShow, setDropDownShow] = useState(false)
+  const onClickDropDown = () => {
+    setDropDownShow(!dropdownShow)
+  }
   return (
     <nav
       className='border-1 border-gray-100'
@@ -45,14 +51,13 @@ export default function Nav() {
           </Link>
         </li>
         <li className='mr-6'>
-          <Link href='/artists'>
-            <a
-              id='artists'
-              className='text-black no-underline hover:text-yellow-600'
-            >
-              ARTIST
-            </a>
-          </Link>
+          <span
+            className='text-black no-underline hover:text-yellow-600 cursor-pointer'
+            onClick={onClickDropDown}
+          >
+            ARTIST
+          </span>
+          {dropdownShow ? <Dropdown /> : ''}
         </li>
         <li className='mr-6'>
           <Link href='/works'>

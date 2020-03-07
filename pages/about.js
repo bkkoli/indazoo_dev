@@ -27,51 +27,54 @@ export default () => {
             </div>
           </div>
           <div className='flex flex-col w-3/12 bg-white'>
-            <div className=' flex flex-row h-20 items-center rounded-t-md'>
+            <div
+              className=' flex flex-row h-20 items-center rounded-t-md'
+              style={{ borderBottom: '1px solid #efefef' }}
+            >
               <span className='font-bold text-xl pl-8'>Member</span>
             </div>
             <div className='pl-8 text-xl' style={{ height: '600px' }}>
-              <div className='flex flex-row items-center'>
+              <div className='flex flex-row items-center mt-8'>
                 <img
-                  className='h-16 w-16 max-h-full w-auto rounded-full'
-                  src='/img/common/logo_face.jpg'
+                  className='h-12 w-12 max-h-full rounded-full'
+                  src='/img/common/bkkoli.jpeg'
                 />
-                <span className='fit-content font-bold ml-2'>kidzoo</span>
+                <span className='fit-content font-bold ml-3'>kxxzxx</span>
               </div>
-              <div className='flex flex-row items-center'>
+              <div className='flex flex-row items-center mt-8'>
                 <img
-                  className='h-16 w-16 max-h-full w-auto rounded-full'
-                  src='/img/common/logo_face.jpg'
+                  className='h-12 w-12 max-h-full rounded-full'
+                  src='/img/common/bkkoli.jpeg'
                 />
-                <span className='fit-content font-bold ml-2'>Omondi</span>
+                <span className='fit-content font-bold ml-3'>Omondi</span>
               </div>
-              <div className='flex flex-row items-center'>
+              <div className='flex flex-row items-center mt-8'>
                 <img
-                  className='h-16 w-16 max-h-full w-auto rounded-full'
-                  src='/img/common/logo_face.jpg'
+                  className='h-12 w-12 max-h-full rounded-full'
+                  src='/img/common/bkkoli.jpeg'
                 />
-                <span className='fit-content font-bold ml-2'>D.A</span>
+                <span className='fit-content font-bold ml-3'>D.A</span>
               </div>
-              <div className='flex flex-row items-center'>
+              <div className='flex flex-row items-center mt-8'>
                 <img
-                  className='h-16 w-16 max-h-full w-auto rounded-full'
-                  src='/img/common/logo_face.jpg'
+                  className='h-12 w-12 max-h-full rounded-full'
+                  src='/img/common/bkkoli.jpeg'
                 />
-                <span className='fit-content font-bold ml-2'>bkkoli</span>
+                <span className='fit-content font-bold ml-3'>bkkoli</span>
               </div>
-              <div className='flex flex-row items-center'>
+              <div className='flex flex-row items-center mt-8'>
                 <img
-                  className='h-16 w-16 max-h-full w-auto rounded-full'
-                  src='/img/common/logo_face.jpg'
+                  className='h-12 w-12 max-h-full rounded-full'
+                  src='/img/common/bkkoli.jpeg'
                 />
-                <span className='fit-content font-bold ml-2'>c-in</span>
+                <span className='fit-content font-bold ml-3'>c-in</span>
               </div>
-              <div className='flex flex-row items-center'>
+              <div className='flex flex-row items-center mt-8'>
                 <img
-                  className='h-16 w-16 max-h-full w-auto rounded-full'
-                  src='/img/common/logo_face.jpg'
+                  className='h-12 w-12 max-h-full rounded-full'
+                  src='/img/common/bkkoli.jpeg'
                 />
-                <span className='fit-content font-bold ml-2'>scenestealer</span>
+                <span className='fit-content font-bold ml-3'>scenestealer</span>
               </div>
             </div>
           </div>

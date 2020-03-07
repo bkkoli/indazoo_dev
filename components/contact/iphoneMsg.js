@@ -7,19 +7,47 @@ export default () => {
           <i className='angle left icon'></i>
         </div> */}
         <div className='flex-grow flex flex-col items-center justify-center'>
-          <i aria-hidden='true' className='user icon h-16 w-16'></i>
+          <i aria-hidden='true' className='user circle icon h-16 w-16'></i>
           <span className='ml-4 mr-4'>Someone</span>
         </div>
       </div>
       <div className='messages-wrapper bg-white h-full flex flex-col'>
         <div className='message from'>Hey!</div>
         <div className='message from last'>How Can I contact you guys?</div>
+        <div className='message to'>Click on the links below</div>
+        <div className='message to'>
+          <a
+            className='text-white no-underline'
+            href='mailto:indazoo-2014@naver.com'
+          >
+            <i className='envelope outline icon'></i>Email
+          </a>
+        </div>
+        <div className='message to'>
+          <a
+            className='text-white no-underline'
+            href='https://www.youtube.com/channel/UCpODlSz6HU1vhdbuE0xBGZA/videos'
+          >
+            <i className='youtube icon'></i>Youtube
+          </a>
+        </div>
+        <div className='message to'>
+          <a
+            className='text-white no-underline'
+            href='https://soundcloud.com/indazoo'
+          >
+            <i className='soundcloud icon'></i>SoundCloud
+          </a>
+        </div>
         <div className='message to last'>
-          Send Email to indazoo-2014@naver.com plz!
+          <a
+            className='text-white no-underline'
+            href='https://www.instagram.com/indazoo_official/'
+          >
+            <i className='instagram icon'></i>Instagram
+          </a>
         </div>
-        <div className='mt-auto mb-4 flex justify-center'>
-          <Button variant='primary'>Send Email</Button>
-        </div>
+        <div className='mt-auto mb-4 flex justify-center'></div>
       </div>
     </div>
   )

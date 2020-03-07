@@ -14,3 +14,11 @@ body,
 #__next > div {
   height: 100%;
 }
+
+.border-bottom {
+  border-bottom: 1px solid #efefef;
+}
+
+.index nav a:hover {
+  color: #d69e2e !important;
+}
