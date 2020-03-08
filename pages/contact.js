@@ -36,10 +36,6 @@ export default () => {
                 <span className='font-bold text-xl'>Someone</span>
               </div> */}
             <div style={{ height: '670px' }}>
-              {/* <img
-                className='w-full rounded-b-md'
-                src='/img/contact/Thumbnail.png'
-              /> */}
               <IphoneMsg />
             </div>
           </div>
