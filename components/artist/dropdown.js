@@ -34,14 +34,14 @@ export default props => {
   const tgtObj = contactObj[props.artist]
   console.dir(props)
   return (
-    <div class='relative'>
+    <div className='relative'>
       <div
-        class='absolute mt-2 py-2 w-48 bg-white rounded-lg shadow-xl'
+        className='absolute mt-2 py-2 w-48 bg-white rounded-lg shadow-xl'
         style={{ left: '-50px' }}
       >
         {tgtObj.instagram ? (
           <a
-            class='block px-4 py-2 text-gray-800 hover:bg-yellow-600 hover:text-white'
+            className='block px-4 py-2 text-gray-800 hover:bg-yellow-600 hover:text-white'
             href={tgtObj.instagram}
           >
             <i aria-hidden='true' className='instagram icon'></i>instagram
@@ -51,7 +51,7 @@ export default props => {
         )}
         {tgtObj.soundCloud ? (
           <a
-            class='block px-4 py-2 text-gray-800 hover:bg-yellow-600 hover:text-white'
+            className='block px-4 py-2 text-gray-800 hover:bg-yellow-600 hover:text-white'
             href={tgtObj.soundCloud}
           >
             <i aria-hidden='true' className='soundcloud icon'></i>soundCloud
@@ -61,7 +61,7 @@ export default props => {
         )}
         {tgtObj.email ? (
           <a
-            class='block px-4 py-2 text-gray-800 hover:bg-yellow-600 hover:text-white'
+            className='block px-4 py-2 text-gray-800 hover:bg-yellow-600 hover:text-white'
             href={tgtObj.email}
           >
             <i aria-hidden='true' className='envelope outline icon'></i>Email

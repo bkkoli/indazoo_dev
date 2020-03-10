@@ -1,0 +1,11 @@
+.works .work img {
+  height: 400px;
+}
+.works .work:hover img {
+  opacity: 0.5;
+}
+.works .work span {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

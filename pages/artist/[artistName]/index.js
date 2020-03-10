@@ -35,7 +35,7 @@ export default () => {
                 className='ellipsis horizontal icon ml-auto text-right pr-8 cursor-pointer'
                 onClick={onClickDropDown}
               ></i>
-              {dropdownShow ? <Dropdown artist='kxxzxx' /> : ''}
+              {dropdownShow ? <Dropdown artist={artistName} /> : ''}
             </div>
             <div className='pl-8 text-xl'>
               <div className='flex flex-row items-center mt-4'>
@@ -44,6 +44,15 @@ export default () => {
                   {artistName}
                 </span>
                 <div>This is test text</div>
+              </div>
+              <div className='flex flex-row items-center mt-4'>
+                {/* <img src='/img/test1.jpg' className='rounded-full h-12 w-12' /> */}
+                <i
+                  aria-hidden='true'
+                  className='user circle icon h-16 w-16'
+                ></i>
+                <span className='font-bold text-xl pl-3 mr-4'>Someone</span>
+                <div>Question</div>
               </div>
             </div>
           </div>
