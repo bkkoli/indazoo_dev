@@ -7,7 +7,7 @@ export default () => {
   return (
     <div className='flex flex-col'>
       <Nav />
-      <div className='bg-gray-200 h-full flex flex-col container-px'>
+      <section className='bg-gray-200 h-full flex flex-col container-px'>
         <BreadCrumb name={router.pathname.replace('/', '')} />
         <div className='flex flex-row'>
           <div className='flex flex-col w-7/12 mr-16'>
@@ -40,7 +40,7 @@ export default () => {
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   )
 }

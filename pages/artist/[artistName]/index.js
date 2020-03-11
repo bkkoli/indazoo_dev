@@ -14,7 +14,7 @@ export default () => {
   return (
     <div className='flex flex-col artists'>
       <Nav />
-      <div className='bg-gray-200 h-full flex flex-col container-px'>
+      <section className='bg-gray-200 h-full flex flex-col container-px'>
         <BreadCrumb name={artistName} />
         <div className='flex flex-row'>
           <div className='flex flex-col w-8/12'>
@@ -57,7 +57,7 @@ export default () => {
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   )
 }

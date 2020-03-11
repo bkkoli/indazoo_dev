@@ -6,8 +6,8 @@ export default () => {
   const router = useRouter()
   return (
     <div className='flex flex-col'>
-      <Nav />
-      <div className='bg-gray-200 h-full flex flex-col container-px'>
+      <Nav active={router.pathname.replace('/', '')} />
+      <section className='bg-gray-200 h-full flex flex-col container-px'>
         <BreadCrumb name={router.pathname.replace('/', '')} />
         <div className='flex flex-row'>
           <div className='flex flex-col w-9/12 mr-16'>
@@ -79,7 +79,7 @@ export default () => {
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   )
 }

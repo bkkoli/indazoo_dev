@@ -9,10 +9,15 @@ export default () => {
   const onMouseLeaveWork = e => {
     e.currentTarget.children[1].style.display = 'none'
   }
+  const onClickWork = e => {
+    console.dir(e.currentTarget.children[1])
+    let workName = e.currentTarget.children[1].textContent
+    router.push(`/work/${workName}`)
+  }
   return (
     <div className='works flex flex-col'>
       <Nav />
-      <div className='bg-gray-200 h-full flex flex-col container-px'>
+      <section className='bg-gray-200 h-full flex flex-col container-px'>
         <BreadCrumb name={router.pathname.replace('/', '')} />
         <div className='flex flex-row flex-wrap'>
           <div
@@ -20,6 +25,7 @@ export default () => {
             style={{ width: '47%' }}
             onMouseEnter={onMouseEnterWork}
             onMouseLeave={onMouseLeaveWork}
+            onClick={onClickWork}
           >
             <img src='/img/common/bkkoli.jpeg' className='rounded-lg' />
             <span className='text-6xl absolute hidden'>開場</span>
@@ -29,6 +35,7 @@ export default () => {
             className='work relative mb-16 ml-auto'
             onMouseEnter={onMouseEnterWork}
             onMouseLeave={onMouseLeaveWork}
+            onClick={onClickWork}
           >
             <img src='/img/common/bkkoli.jpeg' className='rounded-lg' />
             <span className='text-6xl absolute hidden'>704</span>
@@ -38,6 +45,7 @@ export default () => {
             style={{ width: '47%' }}
             onMouseEnter={onMouseEnterWork}
             onMouseLeave={onMouseLeaveWork}
+            onClick={onClickWork}
           >
             <img src='/img/common/bkkoli.jpeg' className='rounded-lg' />
             <span className='text-6xl absolute hidden'>수목장</span>
@@ -47,12 +55,13 @@ export default () => {
             className='work relative mb-16 ml-auto'
             onMouseEnter={onMouseEnterWork}
             onMouseLeave={onMouseLeaveWork}
+            onClick={onClickWork}
           >
             <img src='/img/common/bkkoli.jpeg' className='rounded-lg' />
             <span className='text-6xl absolute hidden'>704</span>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   )
 }

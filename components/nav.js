@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link from '../components/common/link'
 import { useRouter } from 'next/router'
 import Dropdown from './common/dropdown'
 import { useState } from 'react'
@@ -7,17 +7,12 @@ const links = [
   { href: 'https://nextjs.org/docs', label: 'Docs' },
 ]
 
-Nav.getInitialProps = async ctx => {
-  const router = useRouter()
-  let targetId = router.pathname.replace('/', '')
-  document.getElementById(targetId).classList.add('text-yellow-600')
-}
-
-export default function Nav() {
+export default function Nav(props) {
   const [dropdownShow, setDropDownShow] = useState(false)
   const onClickDropDown = () => {
     setDropDownShow(!dropdownShow)
   }
+
   return (
     <nav
       className='border-1 border-gray-100'
@@ -41,7 +36,7 @@ export default function Nav() {
           </Link>
         </li> */}
         <li className='mr-6 ml-auto'>
-          <Link href='/about'>
+          <Link href='/about' activeClassName='text-yellow-600'>
             <a
               id='about'
               className='text-black no-underline hover:text-yellow-600'
@@ -60,7 +55,7 @@ export default function Nav() {
           {dropdownShow ? <Dropdown /> : ''}
         </li>
         <li className='mr-6'>
-          <Link href='/works'>
+          <Link href='/works' activeClassName='text-yellow-600'>
             <a
               id='works'
               className='text-black no-underline hover:text-yellow-600'
@@ -70,7 +65,7 @@ export default function Nav() {
           </Link>
         </li>
         <li className='mr-6'>
-          <Link href='/shop'>
+          <Link href='/shop' activeClassName='text-yellow-600'>
             <a
               id='shop'
               className='text-black no-underline hover:text-yellow-600'
@@ -80,7 +75,7 @@ export default function Nav() {
           </Link>
         </li>
         <li className='mr-6'>
-          <Link href='/contact'>
+          <Link href='/contact' activeClassName='text-yellow-600'>
             <a
               id='contact'
               className='text-black no-underline hover:text-yellow-600'
