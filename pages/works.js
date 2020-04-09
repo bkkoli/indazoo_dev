@@ -18,48 +18,52 @@ export default () => {
     <div className='works flex flex-col'>
       <Nav />
       <section className='bg-gray-200 h-full flex flex-col container-px'>
-        <BreadCrumb name={router.pathname.replace('/', '')} />
-        <div className='flex flex-row flex-wrap'>
+        <BreadCrumb name={router.pathname.replace('/', '')} style={{ height: '10%' }} />
+        <div className='flex flex-row pb-16 workLayout' style={{ height: '90%' }}>
           <div
-            className='work relative mb-16 mr-auto'
-            style={{ width: '47%' }}
+            className='work relative mr-auto cursor-pointer'
+            style={{ width: '54%' }}
             onMouseEnter={onMouseEnterWork}
             onMouseLeave={onMouseLeaveWork}
             onClick={onClickWork}
           >
-            <img src='/img/common/bkkoli.jpeg' className='rounded-lg' />
+            <img src='/img/works/개장.jpeg' className='rounded-lg h-full' />
             <span className='text-6xl absolute hidden'>開場</span>
           </div>
-          <div
+          <div className='flex flex-col w-5/12'>
+            <div
+              /* style={{ width: '47%' }} */
+              style={{ height: '48%' }}
+              className='work relative mb-auto cursor-pointer'
+              onMouseEnter={onMouseEnterWork}
+              onMouseLeave={onMouseLeaveWork}
+              onClick={onClickWork}
+            >
+              <img src='/img/works/704.jpeg' className='rounded-lg' />
+              <span className='text-6xl absolute hidden'>704</span>
+            </div>
+            <div
+              className='work relative cursor-pointer'
+              style={{ height: '48%' }}
+              /* style={{ width: '47%' }} */
+              onMouseEnter={onMouseEnterWork}
+              onMouseLeave={onMouseLeaveWork}
+              onClick={onClickWork}
+            >
+              <img src='/img/works/수목장.jpeg' className='rounded-lg' />
+              <span className='text-6xl absolute hidden'>수목장</span>
+            </div>
+          </div>
+          {/* <div
             style={{ width: '47%' }}
             className='work relative mb-16 ml-auto'
             onMouseEnter={onMouseEnterWork}
             onMouseLeave={onMouseLeaveWork}
             onClick={onClickWork}
           >
-            <img src='/img/common/bkkoli.jpeg' className='rounded-lg' />
+            <img src='/img/works/704.jpeg' className='rounded-lg' />
             <span className='text-6xl absolute hidden'>704</span>
-          </div>
-          <div
-            className='work relative mb-16 mr-auto'
-            style={{ width: '47%' }}
-            onMouseEnter={onMouseEnterWork}
-            onMouseLeave={onMouseLeaveWork}
-            onClick={onClickWork}
-          >
-            <img src='/img/common/bkkoli.jpeg' className='rounded-lg' />
-            <span className='text-6xl absolute hidden'>수목장</span>
-          </div>
-          <div
-            style={{ width: '47%' }}
-            className='work relative mb-16 ml-auto'
-            onMouseEnter={onMouseEnterWork}
-            onMouseLeave={onMouseLeaveWork}
-            onClick={onClickWork}
-          >
-            <img src='/img/common/bkkoli.jpeg' className='rounded-lg' />
-            <span className='text-6xl absolute hidden'>704</span>
-          </div>
+          </div> */}
         </div>
       </section>
     </div>

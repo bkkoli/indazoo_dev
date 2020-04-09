@@ -1,5 +1,6 @@
 .works .work img {
-  height: 400px;
+  max-height: 100%;
+  width: 100%;
 }
 .works .work:hover img {
   opacity: 0.5;
@@ -8,4 +9,21 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+@font-face {
+  font-family: SDMiSaeng;
+  src: url('../public/fonts/SDMiSaeng.ttf');
+}
+.works section .workLayout {
+  font-family: SDMiSaeng;
+}
+
+/* work 개별 */
+
+.works_each .ipod {
+  height: 70vh !important;
+}
+.works_each .track_list .album_cover img {
+  height: 5vh !important;
 }

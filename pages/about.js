@@ -44,7 +44,7 @@ export default () => {
               <div className='flex flex-row items-center mt-8'>
                 <img
                   className='h-12 w-12 max-h-full rounded-full'
-                  src='/img/common/bkkoli.jpeg'
+                  src='/img/common/circle_Omondi.jpeg'
                 />
                 <span className='fit-content font-bold ml-3'>Omondi</span>
               </div>
@@ -65,7 +65,7 @@ export default () => {
               <div className='flex flex-row items-center mt-8'>
                 <img
                   className='h-12 w-12 max-h-full rounded-full'
-                  src='/img/common/bkkoli.jpeg'
+                  src='/img/common/circle_c-in.jpeg'
                 />
                 <span className='fit-content font-bold ml-3'>c-in</span>
               </div>
