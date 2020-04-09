@@ -67,37 +67,24 @@ export default ({ artist }) => {
         <div className='flex flex-row'>
           <div className='flex flex-col w-8/12'>
             <div>
-              <img
-                className='w-full rounded-b-md'
-                style={{ height: '600px' }}
-                src={img2}
-              />
+              <img className='w-full rounded-b-md' style={{ height: '600px' }} src={img2} />
             </div>
           </div>
           <div className='flex flex-col w-4/12 bg-white'>
             <div className='bg-white flex flex-row h-20 items-center rounded-t-md pl-8 border-bottom'>
               <img src={img1} className='rounded-full h-12 w-12' />
               <span className='font-bold text-xl pl-3'>{artistName}</span>
-              <i
-                aria-hidden='true'
-                className='ellipsis horizontal icon ml-auto text-right pr-8 cursor-pointer'
-                onClick={onClickDropDown}
-              ></i>
+              <i aria-hidden='true' className='ellipsis horizontal icon ml-auto text-right pr-8 cursor-pointer' onClick={onClickDropDown}></i>
               {dropdownShow ? <Dropdown artist={artistName} /> : ''}
             </div>
             <div className='pl-8 text-xl'>
               <div className='flex flex-row items-center mt-4'>
                 <img src={img1} className='rounded-full h-12 w-12' />
-                <span className='font-bold text-xl pl-3 mr-4'>
-                  {artistName}
-                </span>
+                <span className='font-bold text-xl pl-3 mr-4'>{artistName}</span>
                 <div>This is test text</div>
               </div>
               <div className='flex flex-row items-center mt-4'>
-                <i
-                  aria-hidden='true'
-                  className='user circle icon h-16 w-16'
-                ></i>
+                <i aria-hidden='true' className='user circle icon h-16 w-16'></i>
                 <span className='font-bold text-xl pl-3 mr-4'>Someone</span>
                 <div>Question</div>
               </div>
@@ -109,7 +96,7 @@ export default ({ artist }) => {
   )
 }
 
-export function getStaticProps() {
+/* export default () => {
   let router = useRouter()
 
   let { artistName } = router.query
@@ -158,4 +145,4 @@ export function getStaticProps() {
       artist: indazooObj[artistName],
     },
   }
-}
+} */

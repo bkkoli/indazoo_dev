@@ -85,7 +85,7 @@ export default () => {
           src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/880590271&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true'
         ></iframe> */}
         <div className='flex relative'>
-          <img src='/img/works/ipod.png' className='rounded-lg ipod' />
+          <img src='/img/works/ipod.png' className='rounded-lg ipod rounded_b_25' />
           <iframe
             width='25%'
             height='280'
@@ -93,10 +93,10 @@ export default () => {
             frameborder='no'
             allow='autoplay'
             className='absolute'
-            style={{ top: '63px', left: '178px', width: '309px', height: '235px' }}
+            style={{ top: '32px', left: '31px', width: '309px', height: '235px' }}
             src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/688402060&color=%23998d82&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true'
           ></iframe>
-          <div className='track_list'>
+          <div className='track_list ml-16'>
             <div className='album title text-4xl mb-8'>{workName} trackList</div>
             {trackList.map((track, index) => {
               return (
