@@ -1,0 +1,22 @@
+.main_nav ul i {
+  display: none;
+}
+@media (max-width: 768px) {
+  .main_nav ul {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .main_nav ul li {
+    display: none;
+  }
+  .main_nav ul i {
+    display: unset;
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 576px) {
+}
+
+@media (max-width: 375px) {
+}

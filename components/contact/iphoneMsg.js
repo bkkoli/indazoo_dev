@@ -13,7 +13,6 @@ export default () => {
       </div>
       <div
         className='messages-wrapper bg-white h-full flex flex-col'
-        style={{ height: '600px' }}
       >
         <div className='message from'>Hey!</div>
         <div className='message from last'>How Can I contact you guys?</div>

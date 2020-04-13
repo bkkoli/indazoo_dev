@@ -7,9 +7,9 @@ export default () => {
   return (
     <div className='flex flex-col'>
       <Nav active={router.pathname.replace('/', '')} />
-      <section className='bg-gray-200 h-full flex flex-col container-px'>
+      <section className='bg-gray-200 h-full flex flex-col container-px about'>
         <BreadCrumb name={router.pathname.replace('/', '')} />
-        <div className='flex flex-row'>
+        <div className='flex flex-row about_body'>
           <div className='flex flex-col w-9/12 mr-16'>
             <div className='bg-white flex flex-row h-20 items-center rounded-t-md pl-8'>
               <img

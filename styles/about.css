@@ -10,3 +10,14 @@
 .artists {
   overflow-y: hidden;
 }
+
+
+@media (max-width: 768px) {
+  .about .about_body div:first-child {
+  }
+}
+
+@media (max-width: 576px) {
+  .about .about_body {
+  }
+}

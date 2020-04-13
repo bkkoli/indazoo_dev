@@ -15,7 +15,7 @@ export default function Nav(props) {
 
   return (
     <nav
-      className='border-1 border-gray-100'
+      className='border-1 border-gray-100 main_nav'
       style={{ borderBottom: '1px solid #cbd5e0' }}
     >
       <ul className='flex justify-start items-center pr-24 pl-24 h-20'>
@@ -84,15 +84,7 @@ export default function Nav(props) {
             </a>
           </Link>
         </li>
-        {/* <ul className="flex justify-between items-center">
-          {links.map(({ href, label }) => (
-            <li key={`${href}${label}`} className="ml-4">
-              <a href={href} className="btn-blue no-underline">
-                {label}
-              </a>
-            </li>
-          ))}
-        </ul> */}
+        <i class="bars icon cursor-pointer"></i>
       </ul>
     </nav>
   )

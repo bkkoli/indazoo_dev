@@ -37,10 +37,16 @@
 .contact .right {
   font-size: 18px;
 }
+
+.contact_right_body {
+  height: 670px;
+}
+
 .contact .messages-wrapper {
   padding-top: 10px;
   position: relative;
   /* border: 1px solid #ddd; */
+  height: 600px;
   border-top: 0 none;
 }
 .contact .message {
@@ -107,4 +113,58 @@
   height: 20px;
   background: #fff;
   border-bottom-left-radius: 10px;
+}
+
+.contact .contact_left_body_img {
+  height: 600px;
+}
+
+@media (max-width: 768px) {
+  .contact_ {
+    height: auto !important;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .contact_ .contact_body {
+    flex-direction: column !important;
+  }
+  .contact_ .contact_body > div {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 4rem;
+  }
+
+  .contact_ .contact_left_body_img {
+    height: 8%;
+  }
+
+  .contact .messages-wrapper {
+    height: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact_ {
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+
+  .contact_ .message {
+    padding: 10px 14px !important;
+  }
+
+  .contact .messages-wrapper {
+    height: 85%;
+  }
+}
+
+@media (max-width: 375px) {
+  .contact_ .message {
+    padding: 7px 14px !important;
+  }
+
+  .contact .messages-wrapper {
+    height: 70%;
+  }
 }

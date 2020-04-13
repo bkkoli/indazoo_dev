@@ -1,0 +1,17 @@
+@media (max-width: 768px) {
+    .breadCrumb {
+        height: 6rem !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .breadCrumb {
+        padding-left: 5%;
+        padding-top: 3%;
+        height: 4rem !important;
+        font-size: 1.25rem !important;
+    }
+}
+
+@media (max-width: 375px) {
+}

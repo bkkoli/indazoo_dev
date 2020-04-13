@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { useRouter } from 'next/router'
 import Nav from '../../../components/nav'
 import BreadCrumb from '../../../components/breadCrumb'
@@ -6,16 +7,19 @@ export default () => {
   const work = {
     수목장: {
       content: 'scenestealer 1st mixtape',
+      image: '/img/works/수목장.jpeg',
     },
     '704': {
       content: 'Indazoo 1st mixtape',
+      image: '/img/works/704.jpeg',
     },
     開場: {
       content: 'Indazoo 1st performance',
+      image: '/img/works/개장.jpeg',
     },
   }
   let { workName } = router.query
-  console.info(workName)
+  workName = workName ? workName : '704'
   let content = ''
 
   let trackList = [
@@ -70,49 +74,88 @@ export default () => {
       featuring: 'kxxzxx',
     },
   ]
+  
+
+  let trackList_sumockjang = [
+    {
+      songName: '밧줄',
+      singer: 'Scenesteala',
+      featuring: '',
+    },
+    {
+      songName: "무명 래퍼의 노래",
+      singer: 'Scenesteala',
+      featuring: '',
+    },
+    {
+      songName: 'Sin',
+      singer: 'Scenesteala',
+      featuring: '',
+    },
+    {
+      songName: '형이임마너한테해줄말이있어',
+      singer: 'Scenesteala',
+      featuring: ``,
+    },
+    {
+      songName: '물',
+      singer: 'Scenesteala',
+      featuring: '',
+    },
+    {
+      songName: '래퍼 중의 래퍼',
+      singer: 'Scenesteala',
+      featuring: '',
+    },
+  ]
+  trackList = workName === '704' ? trackList : trackList_sumockjang
+  const [clicked, setClicked] = useState(false)
+  const onClickTrack = () => {
+    setClicked(true)
+  }
   return (
     <div className='flex flex-col artists'>
       <Nav />
       <section className='bg-gray-200 h-full flex flex-col container-px works_each'>
         <BreadCrumb name={workName} />
-        {/* <div>{content}</div> */}
-        {/* <iframe
-          width='100%'
-          height='450'
-          scrolling='no'
-          frameborder='no'
-          allow='autoplay'
-          src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/880590271&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true'
-        ></iframe> */}
-        <div className='flex relative'>
-          <img src='/img/works/ipod.png' className='rounded-lg ipod rounded_b_25' />
-          <iframe
-            width='25%'
-            height='280'
-            scrolling='no'
-            frameborder='no'
-            allow='autoplay'
-            className='absolute'
-            style={{ top: '32px', left: '31px', width: '309px', height: '235px' }}
-            src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/688402060&color=%23998d82&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true'
-          ></iframe>
-          <div className='track_list ml-16'>
-            <div className='album title text-4xl mb-8'>{workName} trackList</div>
-            {trackList.map((track, index) => {
-              return (
-                <div className='flex my-2' key={index}>
-                  <div className='album_cover'>
-                    <img src='/img/works/704.jpeg' className='rounded-lg' />
-                  </div>
-                  <div className='ml-2 border-t border-b border-solid border-gray-500 flex-grow flex flex-col justify-center'>
-                    <div className='song_name font-bold'>
-                      {index + 1}. {track.songName} {track.featuring !== '' ? '(feat. ' + track.featuring + ')' : ''}
+        <div className='flex flex-row'>
+          <div className='flex flex-col w-8/12'>
+            <div>
+              {clicked ? (
+                <iframe
+                  width='100%'
+                  height='600'
+                  scrolling='no'
+                  frameborder='no'
+                  allow='autoplay'
+                  className='rounded-l-md'
+                  src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/688402060&color=%23998d82&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true'
+                ></iframe>
+              ) : (
+                <img className='w-full rounded-l-md' style={{ height: '600px' }} src={work[workName].image} />
+              )}
+            </div>
+          </div>
+          <div className='flex flex-col w-4/12 bg-white'>
+            <div className='bg-white flex flex-row h-20 items-center rounded-t-md pl-8 border-bottom'>
+              <span className='font-bold text-xl pl-3'>Track List</span>
+            </div>
+            <div className='text-xl'>
+              <div className='track_list'>
+                {trackList.map((track, index) => {
+                  return (
+                    <div className='flex py-2 pl-8 hover:bg-gray-300 cursor-pointer' key={index} onClick={onClickTrack}>
+                      <div className='ml-2 flex-grow flex flex-col justify-center'>
+                        <div className='song_name font-bold'>
+                          {index + 1}. {track.songName} {track.featuring !== '' ? '(feat. ' + track.featuring + ')' : ''}
+                        </div>
+                        <div className='singer'>{track.singer}</div>
+                      </div>
                     </div>
-                    <div className='singer'>{track.singer}</div>
-                  </div>
-                </div>
-              )
-            })}
+                  )
+                })}
+              </div>
+            </div>
           </div>
         </div>
       </section>

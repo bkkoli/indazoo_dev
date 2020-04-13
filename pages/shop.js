@@ -6,9 +6,9 @@ export default () => {
   return (
     <div className='flex flex-col'>
       <Nav />
-      <section className='bg-gray-200 h-full flex flex-col container-px'>
+      <section className='bg-gray-200 h-full flex flex-col container-px shop'>
         <BreadCrumb name={router.pathname.replace('/', '')} />
-        <div className='hero py-64 text-center text-6xl font-extrabold'>
+        <div className='hero py-64 text-center text-6xl font-extrabold shop_body'>
           Comming Soon
         </div>
       </section>

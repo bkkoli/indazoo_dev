@@ -7,9 +7,9 @@ export default () => {
   return (
     <div className='flex flex-col'>
       <Nav />
-      <section className='bg-gray-200 h-full flex flex-col container-px'>
+      <section className='bg-gray-200 h-full flex flex-col container-px contact_'>
         <BreadCrumb name={router.pathname.replace('/', '')} />
-        <div className='flex flex-row'>
+        <div className='flex flex-row contact_body'>
           <div className='flex flex-col w-7/12 mr-16'>
             <div className='bg-white flex flex-row h-20 items-center rounded-t-md pl-8'>
               <img
@@ -24,8 +24,7 @@ export default () => {
             </div>
             <div>
               <img
-                className='w-full rounded-b-md'
-                style={{ height: '600px' }}
+                className='w-full rounded-b-md contact_left_body_img'
                 src='/img/contact/contact_left.jpeg'
               />
             </div>
@@ -35,7 +34,7 @@ export default () => {
                 <img />
                 <span className='font-bold text-xl'>Someone</span>
               </div> */}
-            <div style={{ height: '670px' }}>
+            <div className="contact_right_body" >
               <IphoneMsg />
             </div>
           </div>
