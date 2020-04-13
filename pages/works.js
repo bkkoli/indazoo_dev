@@ -21,8 +21,7 @@ export default () => {
         <BreadCrumb name={router.pathname.replace('/', '')} style={{ height: '10%' }} />
         <div className='flex flex-row pb-16 workLayout' style={{ height: '90%' }}>
           <div
-            className='work relative mr-auto cursor-pointer'
-            style={{ width: '54%' }}
+            className='work relative mr-auto cursor-pointer left_work'
             onMouseEnter={onMouseEnterWork}
             onMouseLeave={onMouseLeaveWork}
             onClick={onClickWork}
@@ -30,7 +29,7 @@ export default () => {
             <img src='/img/works/개장.jpeg' className='rounded-lg h-full' />
             <span className='text-6xl absolute hidden'>開場</span>
           </div>
-          <div className='flex flex-col w-5/12'>
+          <div className='flex flex-col w-5/12 right_work'>
             <div
               /* style={{ width: '47%' }} */
               style={{ height: '48%' }}

@@ -1,5 +1,10 @@
+.works .workLayout .left_work {
+  width: 54%;
+}
+
 .works .work img {
   max-height: 100%;
+  height: 100%;
   width: 100%;
 }
 .works .work:hover img {
@@ -31,4 +36,31 @@
 .works_each .rounded_b_25 {
   border-bottom-right-radius: 2.5rem !important;
   border-bottom-left-radius: 2.5rem !important;
+}
+
+/* works page */
+
+@media (max-width: 768px) {
+  .works section {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .works .workLayout {
+    flex-direction: column !important;
+  }
+  .works .workLayout .left_work {
+    width: 100%;
+    padding-bottom: 4rem;
+  }
+  .works .workLayout .right_work {
+    width: 100%;
+    padding-bottom: 4rem;
+  }
+}
+
+@media (max-width: 576px) {
+}
+
+@media (max-width: 375px) {
 }

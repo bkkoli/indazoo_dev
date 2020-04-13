@@ -84,7 +84,7 @@ export default function Nav(props) {
             </a>
           </Link>
         </li>
-        <i class="bars icon cursor-pointer"></i>
+        <i className="bars icon cursor-pointer"></i>
       </ul>
     </nav>
   )
