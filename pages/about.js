@@ -4,6 +4,9 @@ import { useRouter } from 'next/router'
 
 export default () => {
   const router = useRouter()
+  const onClickAboutImg = () => {
+    alert('test')
+  }
   return (
     <div className='flex flex-col'>
       <Nav active={router.pathname.replace('/', '')} />
@@ -18,7 +21,7 @@ export default () => {
               />
               <span className='font-bold text-xl pl-3'>indazoo</span>
             </div>
-            <div>
+            <div onClick={onClickAboutImg}>
               <img
                 className='w-full rounded-b-md'
                 style={{ height: '600px' }}

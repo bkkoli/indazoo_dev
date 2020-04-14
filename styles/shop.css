@@ -1,4 +1,8 @@
 @media (max-width: 768px) {
+  .shop {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
   .shop .shop_body {
     font-size: 3.8rem;
   }
