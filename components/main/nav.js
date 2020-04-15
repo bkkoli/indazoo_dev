@@ -7,7 +7,7 @@ const links = [
 
 export default function Nav() {
   return (
-    <nav className='fixed bottom-0 right-0 text-2xl'>
+    <nav className='fixed bottom-0 right-0 text-2xl index_nav'>
       <ul className='flex justify-end p-8 pr-24 pb-24'>
         <li className='mr-6'>
           <a

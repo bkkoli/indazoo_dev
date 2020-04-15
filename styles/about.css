@@ -14,13 +14,13 @@
 
 @media (max-width: 1650px) {
   .about {
-    height: auto !important;
+    /* height: auto !important; */
   }
   .about .about_body {
-    flex-direction: column !important;
+    /* flex-direction: column !important; */
   }
   .about .about_body > div:first-child {
-    margin-bottom: 4rem;
+    /* margin-bottom: 4rem; */
   }
 }
 @media (max-width: 768px) {

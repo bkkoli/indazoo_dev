@@ -16,7 +16,7 @@
   width: unset;
 }
 
-.play {
+.play::before {
   position: absolute;
   left: 50%;
   top: 50%;

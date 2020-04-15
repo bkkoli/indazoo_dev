@@ -44,6 +44,7 @@
   .works section {
     padding-left: 10%;
     padding-right: 10%;
+    height: auto;
   }
 
   .works .workLayout {
@@ -55,7 +56,29 @@
   }
   .works .workLayout .right_work {
     width: 100%;
-    padding-bottom: 4rem;
+  }
+  .works .workLayout .right_work > div:first-child {
+    margin-bottom: 4rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+}
+
+@media (max-width: 375px) {
+}
+
+/* work index page */
+@media (max-width: 1024px) {
+  .works_each {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  .works_each .title {
+    padding-left: 5%;
+  }
+  .works_each .track {
+    padding-left: 5%;
   }
 }
 

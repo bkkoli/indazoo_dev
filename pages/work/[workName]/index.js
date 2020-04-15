@@ -137,14 +137,14 @@ export default () => {
             </div>
           </div>
           <div className='flex flex-col w-4/12 bg-white'>
-            <div className='bg-white flex flex-row h-20 items-center rounded-t-md pl-8 border-bottom'>
+            <div className='bg-white flex flex-row h-20 items-center rounded-t-md pl-8 border-bottom title'>
               <span className='font-bold text-xl pl-3'>Track List</span>
             </div>
             <div className='text-xl'>
               <div className='track_list'>
                 {trackList.map((track, index) => {
                   return (
-                    <div className='flex py-2 pl-8 hover:bg-gray-300 cursor-pointer' key={index} onClick={onClickTrack}>
+                    <div className='flex py-2 pl-8 hover:bg-gray-300 cursor-pointer track' key={index} onClick={onClickTrack}>
                       <div className='ml-2 flex-grow flex flex-col justify-center'>
                         <div className='song_name font-bold'>
                           {index + 1}. {track.songName} {track.featuring !== '' ? '(feat. ' + track.featuring + ')' : ''}

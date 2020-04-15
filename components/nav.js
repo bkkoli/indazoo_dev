@@ -9,21 +9,20 @@ const links = [
 
 export default function Nav(props) {
   const [dropdownShow, setDropDownShow] = useState(false)
+  const [isClosedMobileMenu, setIsClosedMobileMenu] = useState(true)
   const onClickDropDown = () => {
     setDropDownShow(!dropdownShow)
   }
 
+  const toggleMobileMenu = () => {
+    setIsClosedMobileMenu(!isClosedMobileMenu)
+  }
+
   return (
-    <nav
-      className='border-1 border-gray-100 main_nav'
-      style={{ borderBottom: '1px solid #cbd5e0' }}
-    >
+    <nav className='border-1 border-gray-100 main_nav' style={{ borderBottom: '1px solid #cbd5e0' }}>
       <ul className='flex justify-start items-center pr-24 pl-24 h-20'>
         <Link href='/'>
-          <img
-            src='/img/common/logo_black.png'
-            className='h-12 cursor-pointer'
-          />
+          <img src='/img/common/logo_black.png' className='h-12 cursor-pointer' />
         </Link>
         {/* <li className='mr-6 ml-auto'>
           <Link href='/'>
@@ -37,54 +36,85 @@ export default function Nav(props) {
         </li> */}
         <li className='mr-6 ml-auto'>
           <Link href='/about' activeClassName='text-yellow-600'>
-            <a
-              id='about'
-              className='text-black no-underline hover:text-yellow-600'
-            >
+            <a id='about' className='text-black no-underline hover:text-yellow-600'>
               ABOUT
             </a>
           </Link>
         </li>
         <li className='mr-6'>
-          <span
-            className='text-black no-underline hover:text-yellow-600 cursor-pointer'
-            onClick={onClickDropDown}
-          >
+          <span className='text-black no-underline hover:text-yellow-600 cursor-pointer' onClick={onClickDropDown}>
             ARTIST
           </span>
           {dropdownShow ? <Dropdown /> : ''}
         </li>
         <li className='mr-6'>
           <Link href='/works' activeClassName='text-yellow-600'>
-            <a
-              id='works'
-              className='text-black no-underline hover:text-yellow-600'
-            >
+            <a id='works' className='text-black no-underline hover:text-yellow-600'>
               WORKS
             </a>
           </Link>
         </li>
         <li className='mr-6'>
           <Link href='/shop' activeClassName='text-yellow-600'>
-            <a
-              id='shop'
-              className='text-black no-underline hover:text-yellow-600'
-            >
+            <a id='shop' className='text-black no-underline hover:text-yellow-600'>
               SHOP
             </a>
           </Link>
         </li>
         <li className='mr-6'>
           <Link href='/contact' activeClassName='text-yellow-600'>
-            <a
-              id='contact'
-              className='text-black no-underline hover:text-yellow-600'
-            >
+            <a id='contact' className='text-black no-underline hover:text-yellow-600'>
               CONTACT
             </a>
           </Link>
         </li>
-        <i className="bars icon cursor-pointer"></i>
+        <i className='bars icon cursor-pointer' onClick={toggleMobileMenu}></i>
+        {isClosedMobileMenu ? (
+          ''
+        ) : (
+          <ul className='fixed z-50 bg-white inset-0 flex flex-col items-center mobile_menu hidden'>
+            <div className='flex'>
+              <i aria-hidden='true' className='close icon text-black' onClick={toggleMobileMenu}></i>
+            </div>
+            <ul className='flex flex-col items-center w-full h-full text-3xl'>
+              {/* <li className='title'>Menu</li> */}
+              <li className='body'>
+                <Link href='/about' activeClassName='text-yellow-600'>
+                  <a id='about' className='text-black no-underline hover:text-yellow-600'>
+                    ABOUT
+                  </a>
+                </Link>
+              </li>
+              <li className='body'>
+                <span className='text-black no-underline hover:text-yellow-600 cursor-pointer' onClick={onClickDropDown}>
+                  ARTIST
+                </span>
+                {dropdownShow ? <Dropdown /> : ''}
+              </li>
+              <li className='body'>
+                <Link href='/works' activeClassName='text-yellow-600'>
+                  <a id='works' className='text-black no-underline hover:text-yellow-600'>
+                    WORKS
+                  </a>
+                </Link>
+              </li>
+              <li className='body'>
+                <Link href='/shop' activeClassName='text-yellow-600'>
+                  <a id='shop' className='text-black no-underline hover:text-yellow-600'>
+                    SHOP
+                  </a>
+                </Link>
+              </li>
+              <li className='body'>
+                <Link href='/contact' activeClassName='text-yellow-600'>
+                  <a id='contact' className='text-black no-underline hover:text-yellow-600'>
+                    CONTACT
+                  </a>
+                </Link>
+              </li>
+            </ul>
+          </ul>
+        )}
       </ul>
     </nav>
   )
