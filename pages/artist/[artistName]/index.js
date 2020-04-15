@@ -64,13 +64,19 @@ export default ({ artist }) => {
       <Nav />
       <section className='bg-gray-200 h-full flex flex-col container-px'>
         <BreadCrumb name={artistName} />
-        <div className='flex flex-row'>
-          <div className='flex flex-col w-8/12'>
+        <div className='flex flex-row artists_body'>
+          <div className='flex flex-col w-8/12 left'>
+            <div className='bg-white flex flex-row h-20 items-center rounded-t-md pl-8 border-bottom hidden'>
+              <img src={img1} className='rounded-full h-12 w-12' />
+              <span className='font-bold text-xl pl-3'>{artistName}</span>
+              <i aria-hidden='true' className='ellipsis horizontal icon ml-auto text-right pr-8 cursor-pointer' onClick={onClickDropDown}></i>
+              {dropdownShow ? <Dropdown artist={artistName} /> : ''}
+            </div>
             <div>
               <img className='w-full rounded-b-md' style={{ height: '600px' }} src={img2} />
             </div>
           </div>
-          <div className='flex flex-col w-4/12 bg-white'>
+          <div className='flex flex-col w-4/12 bg-white right'>
             <div className='bg-white flex flex-row h-20 items-center rounded-t-md pl-8 border-bottom'>
               <img src={img1} className='rounded-full h-12 w-12' />
               <span className='font-bold text-xl pl-3'>{artistName}</span>
@@ -83,7 +89,7 @@ export default ({ artist }) => {
                 <span className='font-bold text-xl pl-3 mr-4'>{artistName}</span>
                 <div>This is test text</div>
               </div>
-              <div className='flex flex-row items-center mt-4'>
+              <div className='flex flex-row items-center mt-4 mb-4'>
                 <i aria-hidden='true' className='user circle icon h-16 w-16'></i>
                 <span className='font-bold text-xl pl-3 mr-4'>Someone</span>
                 <div>Question</div>

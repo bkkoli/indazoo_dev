@@ -7,28 +7,99 @@
   padding-right: 18%;
 }
 
-.artists {
-  overflow-y: hidden;
-}
-
-
 @media (max-width: 1650px) {
-  .about {
-    /* height: auto !important; */
-  }
+  /* .about {
+    height: auto !important;
+  } */
   .about .about_body {
-    /* flex-direction: column !important; */
+    flex-direction: column !important;
   }
   .about .about_body > div:first-child {
     /* margin-bottom: 4rem; */
+    width: 100%
+  }
+  .about .member {
+    width: 100%;
+  }
+  .about .member {
+    display: none;
+  }
+  .about .tag {
+    display: flex;
+  }
+  .about .tag .triangle_down {
+    width: 0px;
+    height: 0px;
+    border-top:8px solid black;
+    border-bottom:8px solid none;
+    border-right: 8px solid transparent;
+    border-left: 8px solid  transparent;
+    opacity: 0.75;
+  }
+  .about .tag .triangle_up {
+    width: 0px;
+    height: 0px;
+    border-top:8px solid none;
+    border-bottom:8px solid black;
+    border-right: 8px solid transparent;
+    border-left: 8px solid  transparent;
+    opacity: 0.75;
+  }
+  .about .da_position {
+    top: 32%;
+    left: 27%;
+  }
+  .about .bkkoli_position {
+    top: 23%;
+    left: 42%;
+  }
+  .about .omondi_position {
+    top: 23%;
+    left: 56%;
+  }
+  .about .cin_position {
+    top: 80%;
+    left: 30%;
+  }
+  .about .kxxzxx_position {
+    top: 68%;
+    left: 54%;
   }
 }
 @media (max-width: 768px) {
-  .about .about_body div:first-child {
+  .about {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  .about .da_position {
+    top: 28%;
+    left: 26%;
+  }
+  .about .bkkoli_position {
+    top: 19%;
+    left: 40%;
+  }
+  .about .omondi_position {
+    top: 20%;
+    left: 54%;
   }
 }
 
 @media (max-width: 576px) {
-  .about .about_body {
+  .about {
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+  .about .da_position {
+    top: 30%;
+    left: 25%;
+  }
+  .about .bkkoli_position {
+    top: 19%;
+    left: 39.5%;
+  }
+  .about .omondi_position {
+    top: 33%;
+    left: 54%;
   }
 }

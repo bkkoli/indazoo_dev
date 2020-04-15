@@ -18,14 +18,9 @@ export default () => {
     <div className='works flex flex-col'>
       <Nav />
       <section className='bg-gray-200 h-full flex flex-col container-px'>
-        <BreadCrumb name={router.pathname.replace('/', '')} style={{ height: '10%' }} />
-        <div className='flex flex-row pb-16 workLayout' style={{ height: '90%' }}>
-          <div
-            className='work relative mr-auto cursor-pointer left_work'
-            onMouseEnter={onMouseEnterWork}
-            onMouseLeave={onMouseLeaveWork}
-            onClick={onClickWork}
-          >
+        <BreadCrumb name={router.pathname.replace('/', '')} />
+        <div className='flex flex-row pb-16 workLayout'>
+          <div className='work relative mr-auto cursor-pointer left_work' onMouseEnter={onMouseEnterWork} onMouseLeave={onMouseLeaveWork} onClick={onClickWork}>
             <img src='/img/works/개장.jpeg' className='rounded-lg h-full' />
             <span className='text-6xl absolute hidden'>開場</span>
           </div>

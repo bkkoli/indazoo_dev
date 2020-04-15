@@ -1,0 +1,30 @@
+@media (max-width: 768px) {
+  .artists section {
+    padding-left: 10%;
+    padding-right: 10%;
+    height: auto;
+  }
+  .artists section > .artists_body {
+    flex-direction: column !important;
+    margin-bottom: 4rem;
+  }
+  .artists section > .artists_body > .left {
+    width: 100%;
+  }
+  .artists section > .artists_body > .right {
+    width: 100%;
+  }
+  .artists section > .artists_body > .left > div:first-child {
+    display: flex;
+  }
+  .artists section > .artists_body > .right > div:first-child {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .artists section {
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+}

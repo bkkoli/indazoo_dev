@@ -39,14 +39,11 @@
 }
 
 /* works page */
-
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .works section {
-    padding-left: 10%;
-    padding-right: 10%;
     height: auto;
   }
-
+  
   .works .workLayout {
     flex-direction: column !important;
   }
@@ -59,6 +56,12 @@
   }
   .works .workLayout .right_work > div:first-child {
     margin-bottom: 4rem !important;
+  }
+}
+@media (max-width: 768px) {
+  .works section {
+    padding-left: 10%;
+    padding-right: 10%;
   }
 }
 

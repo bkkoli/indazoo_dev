@@ -5,6 +5,7 @@
 @import './shop.css';
 @import './breadCrumb.css';
 @import './nav.css';
+@import './artist.css';
 
 /* purgecss start ignore */
 @tailwind base;
