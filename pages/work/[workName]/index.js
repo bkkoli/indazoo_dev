@@ -74,7 +74,6 @@ export default () => {
       featuring: 'kxxzxx',
     },
   ]
-  
 
   let trackList_sumockjang = [
     {
@@ -83,7 +82,7 @@ export default () => {
       featuring: '',
     },
     {
-      songName: "무명 래퍼의 노래",
+      songName: '무명 래퍼의 노래',
       singer: 'Scenesteala',
       featuring: '',
     },
@@ -114,11 +113,11 @@ export default () => {
     setClicked(true)
   }
   return (
-    <div className='flex flex-col artists'>
+    <div className='flex flex-col works_index'>
       <Nav />
       <section className='bg-gray-200 h-full flex flex-col container-px works_each'>
         <BreadCrumb name={workName} />
-        <div className='flex flex-row'>
+        <div className='flex flex-row desktop'>
           <div className='flex flex-col w-8/12'>
             <div>
               {clicked ? (
@@ -157,6 +156,18 @@ export default () => {
               </div>
             </div>
           </div>
+        </div>
+        <div className='mobile mb-16 relative hidden'>
+          <iframe
+            width='85%'
+            height='39%'
+            scrolling='no'
+            frameBorder='no'
+            allow='autoplay'
+            className='absolute ipod_display'
+            src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/688402060&color=%23998d82&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true'
+          ></iframe>
+          <img className='w-full rounded_b_25 ipod' src='/img/works/ipod.png' onClick={onClickTrack} />
         </div>
       </section>
     </div>

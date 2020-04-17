@@ -24,26 +24,13 @@
   font-family: SDMiSaeng;
 }
 
-/* work 개별 */
-
-.works_each .ipod {
-  height: 70vh !important;
-}
-.works_each .track_list .album_cover img {
-  height: 5vh !important;
-}
-
-.works_each .rounded_b_25 {
-  border-bottom-right-radius: 2.5rem !important;
-  border-bottom-left-radius: 2.5rem !important;
+.works section {
+  height: auto;
 }
 
 /* works page */
 @media (max-width: 1024px) {
-  .works section {
-    height: auto;
-  }
-  
+
   .works .workLayout {
     flex-direction: column !important;
   }
@@ -72,6 +59,14 @@
 }
 
 /* work index page */
+.works_each .ipod {
+  height: 70vh !important;
+}
+.works_each .track_list .album_cover img {
+  height: 5vh !important;
+}
+
+
 @media (max-width: 1024px) {
   .works_each {
     padding-left: 10%;
@@ -84,9 +79,33 @@
     padding-left: 5%;
   }
 }
+@media (max-width: 768px) {
+  .works_each .desktop {
+    display: none !important;
+  }
+  .works_each .mobile {
+    display: unset !important;
+  }
+  .works_each .mobile .rounded_b_25 {
+    border-bottom-right-radius: 4rem !important;
+    border-bottom-left-radius: 4rem !important;
+  }
+  .works_each .mobile .ipod_display {
+    left: 8.2%;
+    top: 5%;
+    border-top-right-radius: 1.25rem !important;
+    border-top-left-radius: 1.25rem !important;
+    border-bottom-right-radius: 1.25rem !important;
+    border-bottom-left-radius: 1.25rem !important;
+  }
+}
 
 @media (max-width: 576px) {
 }
 
 @media (max-width: 375px) {
+  .works_each {
+    padding-left: 0%;
+    padding-right: 0%;
+  }
 }

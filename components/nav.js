@@ -85,11 +85,26 @@ export default function Nav(props) {
                   </a>
                 </Link>
               </li>
-              <li className='body'>
-                <span className='text-black no-underline hover:text-yellow-600 cursor-pointer' onClick={onClickDropDown}>
-                  ARTIST
-                </span>
-                {dropdownShow ? <Dropdown /> : ''}
+              <li className='body flex flex-col' style={{marginBottom:'3%'}}>
+                <div className='flex flex-row' onClick={onClickDropDown}>
+                  {dropdownShow ? <i className='minus icon'></i> : <i className='plus icon'></i>}
+                  <span className='text-black no-underline cursor-pointer'>
+                    ARTIST
+                  </span>
+                </div>
+
+                {dropdownShow ? (
+                  <div className='flex flex-col items-center artist_mobile_dropdown'>
+                    <span className='mb-3 mt-3 text-gray-600'>kxxzxx</span>
+                    <span className='mb-3 mt-3 text-gray-600'>bkkoli</span>
+                    <span className='mb-3 mt-3 text-gray-600'>c-in</span>
+                    <span className='mb-3 mt-3 text-gray-600'>Omondi</span>
+                    <span className='mb-3 mt-3 text-gray-600'>D.A</span>
+                    <span className='mb-3 mt-3 text-gray-600'>scenestealer</span>
+                  </div>
+                ) : (
+                  ''
+                )}
               </li>
               <li className='body'>
                 <Link href='/works' activeClassName='text-yellow-600'>

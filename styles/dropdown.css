@@ -1,0 +1,10 @@
+.artist_dropdown > div {
+  left: -50px;
+}
+
+@media (max-width: 768px) {
+  .artist_dropdown > div {
+    right: 0px;
+    left: unset;
+  }
+}

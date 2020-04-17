@@ -34,10 +34,9 @@ export default props => {
   const tgtObj = contactObj[props.artist]
   console.dir(props)
   return (
-    <div className='relative'>
+    <div className='relative artist_dropdown'>
       <div
         className='absolute mt-2 py-2 w-48 bg-white rounded-lg shadow-xl'
-        style={{ left: '-50px' }}
       >
         {tgtObj.instagram ? (
           <a

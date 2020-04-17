@@ -22,9 +22,9 @@ export default () => {
                 className='ellipsis horizontal icon flex-auto text-right pr-8'
               ></i> */}
             </div>
-            <div>
+            <div className='h-full'>
               <img
-                className='w-full rounded-b-md contact_left_body_img'
+                className='w-full h-full rounded-b-md contact_left_body_img'
                 src='/img/contact/contact_left.jpeg'
               />
             </div>

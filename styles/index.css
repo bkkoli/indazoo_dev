@@ -6,6 +6,7 @@
 @import './breadCrumb.css';
 @import './nav.css';
 @import './artist.css';
+@import './dropdown.css';
 
 /* purgecss start ignore */
 @tailwind base;
