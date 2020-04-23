@@ -32,6 +32,7 @@ export default () => {
       songName: '일기',
       singer: 'D.A',
       featuring: 'kxxzxx',
+      url: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/688402048&color=%23998d82&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true'
     },
     {
       songName: '보다',
@@ -107,10 +108,46 @@ export default () => {
       featuring: '',
     },
   ]
+
   trackList = workName === '704' ? trackList : trackList_sumockjang
   const [clicked, setClicked] = useState(false)
-  const onClickTrack = () => {
+  const onClickTrack = (e) => {
+    console.info(e.currentTarget.querySelector('.url').innerText)
     setClicked(true)
+  }
+  const onClickIpod = e => {
+    let client_x = e.clientX
+    let client_y = e.clientY
+    if (screen.width > 375) {
+      let previous_song_left = (screen.width / 10) * 2.9
+      let previous_song_right = (screen.width / 10) * 3.5
+      let next_song_left = (screen.width / 10) * 6.5
+      let next_song_right = (screen.width / 10) * 7.1
+      let song_top = (screen.height / 10) * 6.6
+      let song_bottom = (screen.height / 10) * 6.8
+      let menu_left = (screen.width / 10) * 4.7
+      let menu_right = (screen.width / 10) * 5.4
+      let menu_top = (screen.height / 10) * 5.5
+      let menu_bottom = (screen.height / 10) * 6
+      
+      if (client_y >= song_top && client_y <= song_bottom) {
+        if (client_x >= previous_song_left && client_x <= previous_song_right) {
+          alert('left')
+        }
+        if (client_x >= next_song_left && client_x <= next_song_right) {
+          alert('right')
+        }
+      }
+
+      if (client_x >= menu_left && client_x <= menu_right) {
+        if ( client_y >= menu_top && client_y <= menu_bottom) {
+          alert('menu')
+        }
+
+      }
+
+    } else {
+    }
   }
   return (
     <div className='flex flex-col works_index'>
@@ -125,7 +162,7 @@ export default () => {
                   width='100%'
                   height='600'
                   scrolling='no'
-                  frameborder='no'
+                  frameBorder='no'
                   allow='autoplay'
                   className='rounded-l-md'
                   src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/688402060&color=%23998d82&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true'
@@ -149,6 +186,7 @@ export default () => {
                           {index + 1}. {track.songName} {track.featuring !== '' ? '(feat. ' + track.featuring + ')' : ''}
                         </div>
                         <div className='singer'>{track.singer}</div>
+                        <div className='hidden url'>{track.url}</div>
                       </div>
                     </div>
                   )
@@ -167,7 +205,7 @@ export default () => {
             className='absolute ipod_display'
             src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/688402060&color=%23998d82&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true'
           ></iframe>
-          <img className='w-full rounded_b_25 ipod' src='/img/works/ipod.png' onClick={onClickTrack} />
+          <img className='w-full rounded_b_25 ipod' src='/img/works/ipod.png' onClick={onClickIpod} />
         </div>
       </section>
     </div>

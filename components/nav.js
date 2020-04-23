@@ -85,22 +85,32 @@ export default function Nav(props) {
                   </a>
                 </Link>
               </li>
-              <li className='body flex flex-col' style={{marginBottom:'3%'}}>
+              <li className='body flex flex-col' style={{ marginBottom: '3%' }}>
                 <div className='flex flex-row' onClick={onClickDropDown}>
                   {dropdownShow ? <i className='minus icon'></i> : <i className='plus icon'></i>}
-                  <span className='text-black no-underline cursor-pointer'>
-                    ARTIST
-                  </span>
+                  <span className='text-black no-underline cursor-pointer'>ARTIST</span>
                 </div>
 
                 {dropdownShow ? (
                   <div className='flex flex-col items-center artist_mobile_dropdown'>
-                    <span className='mb-3 mt-3 text-gray-600'>kxxzxx</span>
-                    <span className='mb-3 mt-3 text-gray-600'>bkkoli</span>
-                    <span className='mb-3 mt-3 text-gray-600'>c-in</span>
-                    <span className='mb-3 mt-3 text-gray-600'>Omondi</span>
-                    <span className='mb-3 mt-3 text-gray-600'>D.A</span>
-                    <span className='mb-3 mt-3 text-gray-600'>scenestealer</span>
+                    <Link href='/artist/kxxzxx'>
+                      <span className='mb-3 mt-3 text-gray-600'>kxxzxx</span>
+                    </Link>
+                    <Link href='/artist/bkkoli'>
+                      <span className='mb-3 mt-3 text-gray-600'>bkkoli</span>
+                    </Link>
+                    <Link href='/artist/c-in'>
+                      <span className='mb-3 mt-3 text-gray-600'>c-in</span>
+                    </Link>
+                    <Link href='/artist/Omondi'>
+                      <span className='mb-3 mt-3 text-gray-600'>Omondi</span>
+                    </Link>
+                    <Link href='/artist/D.A'>
+                      <span className='mb-3 mt-3 text-gray-600'>D.A</span>
+                    </Link>
+                    <Link href='/artist/scenestealer'>
+                      <span className='mb-3 mt-3 text-gray-600'>scenestealer</span>
+                    </Link>
                   </div>
                 ) : (
                   ''
@@ -131,6 +141,77 @@ export default function Nav(props) {
           </ul>
         )}
       </ul>
+      <style jsx>{`
+        .main_nav > ul > i {
+          display: none;
+        }
+        @media (max-width: 768px) {
+          .main_nav > ul {
+            padding-left: 2rem;
+            padding-right: 2rem;
+          }
+          .main_nav > ul > li {
+            display: none;
+          }
+          .main_nav > ul > i {
+            display: unset;
+            margin-left: auto;
+          }
+
+          .main_nav .mobile_menu {
+            display: unset;
+          }
+          .main_nav .mobile_menu > div > i {
+            font-size: 3rem !important;
+            margin-top: 5%;
+            margin-right: 5%;
+            margin-left: auto;
+          }
+          .main_nav .mobile_menu .title {
+            margin-top: 5%;
+            margin-bottom: 5%;
+          }
+          .main_nav .mobile_menu .body {
+            margin-bottom: 5%;
+          }
+          .main_nav .mobile_menu .body:first-child {
+            margin-top: 15%;
+          }
+          .main_nav .mobile_menu ul {
+            font-size: 3rem;
+          }
+        }
+
+        @media (max-width: 576px) {
+          .main_nav .mobile_menu > div > i {
+            font-size: 2rem !important;
+          }
+          .main_nav .mobile_menu .title {
+            margin-top: 5%;
+            margin-bottom: 5%;
+          }
+          .main_nav .mobile_menu .body {
+            margin-bottom: 5%;
+          }
+          .main_nav .mobile_menu .body .artist_mobile_dropdown > span {
+            margin-top: 0.5rem !important;
+            margin-bottom: 0.5rem !important;
+          }
+          .main_nav .mobile_menu .body:first-child {
+            margin-top: 25%;
+          }
+          .main_nav .mobile_menu ul {
+            font-size: 2rem;
+          }
+        }
+
+        @media (max-width: 375px) {
+          .main_nav .mobile_menu .body .artist_mobile_dropdown > span {
+            margin-top: 0.3rem !important;
+            margin-bottom: 0.3rem !important;
+          }
+        }
+      `}</style>
     </nav>
   )
 }

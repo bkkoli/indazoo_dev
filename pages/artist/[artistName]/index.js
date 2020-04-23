@@ -48,9 +48,6 @@ export default ({ artist }) => {
   const router = useRouter()
   const { artistName } = router.query
 
-  console.info('---------------------------------------------')
-  console.dir(artist)
-
   const [dropdownShow, setDropDownShow] = useState(false)
   const onClickDropDown = () => {
     setDropDownShow(!dropdownShow)

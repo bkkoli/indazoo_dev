@@ -35,40 +35,43 @@ export default props => {
   console.dir(props)
   return (
     <div className='relative artist_dropdown'>
-      <div
-        className='absolute mt-2 py-2 w-48 bg-white rounded-lg shadow-xl'
-      >
+      <div className='absolute mt-2 py-2 w-48 bg-white rounded-lg shadow-xl'>
         {tgtObj.instagram ? (
-          <a
-            className='block px-4 py-2 text-gray-800 hover:bg-yellow-600 hover:text-white'
-            href={tgtObj.instagram}
-          >
+          <a className='block px-4 py-2 text-gray-800 hover:bg-yellow-600 hover:text-white' href={tgtObj.instagram}>
             <i aria-hidden='true' className='instagram icon'></i>instagram
           </a>
         ) : (
           ''
         )}
         {tgtObj.soundCloud ? (
-          <a
-            className='block px-4 py-2 text-gray-800 hover:bg-yellow-600 hover:text-white'
-            href={tgtObj.soundCloud}
-          >
+          <a className='block px-4 py-2 text-gray-800 hover:bg-yellow-600 hover:text-white' href={tgtObj.soundCloud}>
             <i aria-hidden='true' className='soundcloud icon'></i>soundCloud
           </a>
         ) : (
           ''
         )}
         {tgtObj.email ? (
-          <a
-            className='block px-4 py-2 text-gray-800 hover:bg-yellow-600 hover:text-white'
-            href={tgtObj.email}
-          >
+          <a className='block px-4 py-2 text-gray-800 hover:bg-yellow-600 hover:text-white' href={tgtObj.email}>
             <i aria-hidden='true' className='envelope outline icon'></i>Email
           </a>
         ) : (
           ''
         )}
       </div>
+      <style jsx>
+        {`
+          .artist_dropdown > div {
+            left: -50px;
+          }
+
+          @media (max-width: 768px) {
+            .artist_dropdown > div {
+              right: 0px;
+              left: unset;
+            }
+          }
+        `}
+      </style>
     </div>
   )
 }

@@ -2,11 +2,8 @@
 @import './about.css';
 @import './contact.css';
 @import './work.css';
-@import './shop.css';
-@import './breadCrumb.css';
 @import './nav.css';
 @import './artist.css';
-@import './dropdown.css';
 
 /* purgecss start ignore */
 @tailwind base;
