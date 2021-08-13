@@ -17,7 +17,7 @@
     "@zeit/next-less": "^1.0.1",
     "bootstrap": "^4.4.1",
     "less": "^3.11.1",
-    "next": "^9.3.4",
+    "next": "^11.1.0",
     "postcss-preset-env": "^6.7.0",
     "react": "^16.13.0",
     "react-bootstrap": "^1.0.0-beta.17",
