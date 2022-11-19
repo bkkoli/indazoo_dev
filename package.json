@@ -17,14 +17,14 @@
     "@zeit/next-less": "^1.0.1",
     "bootstrap": "^4.4.1",
     "less": "^3.11.1",
-    "next": "^9.3.4",
+    "next": "^13.0.4",
     "postcss-preset-env": "^6.7.0",
     "react": "^16.13.0",
     "react-bootstrap": "^1.0.0-beta.17",
     "react-dom": "^16.13.0",
     "semantic-ui-css": "^2.4.1",
     "strip-ansi": "^6.0.0",
-    "styled-jsx": "^3.2.5",
+    "styled-jsx": "^5.1.0",
     "tailwindcss": "^1.2.0"
   },
   "devDependencies": {
